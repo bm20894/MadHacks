@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.modal-window {
+  position: fixed;
+  /* background-color: rgba(200, 200, 200, 0.75); */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: black;
+  color: white;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.button {
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+}
+
+a.ex1:hover, a.ex1:active {color: red;}
+
+
+</style>
+</head>
+
+
+
+<body>
+<center>
+<h1>Mohammad Sweidan</h1>
+</center>
+<ul>
+<center>
+<a href="#open-modal"><button class="button">Education</button></a>
+</center>
+<div id="open-modal" class="modal-window">
+  <div>
+    <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+
+        <li>Purdue University</li>
+        <li>Bachelors of Science in Computer Engineering</li>
+        <li>May 2020</li>
+        <li>GPA:  7/4</li>
+
+  </div>
+</div>
+</ul>
+<ul>
+<center>
+<a href="#open-modal3"><button class="button">Skills</button></a>
+</center>
+<div id="open-modal3" class="modal-window">
+  <div>
+    <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+
+        <li>Programming:C, Python, HTML, CSS, SQL</li>
+        <li>Leadership</li>
+        <li>Teamwork</li>
+        <li>Clear Communication</li>
+
+  </div>
+</div>
+</ul>
+<ul>
+<center>
+<a href="#open-modal1"><button class="button">Work Experience</button></a>
+</center>
+<div id="open-modal1" class="modal-window">
+  <div>
+    <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+    <h3><li>Internships</li></h3>
+      <ul>
+        <li>Google software Engineer Fall 2017</li>
+        <li>Microsoft sofware Engineer Spring 2018</li>
+      </ul>
+    <h3><li>Research</li></h3>
+      <ul>
+        <li>Rubbish Research With Jahanshahi</li>
+        <li>Future research with Fu Chen<br></li>
+      </ul>
+  </div>
+</div>
+</ul>
+<ul>
+<center>
+<a href="#open-modal2"><button class="button">Extra Curricular</button></a>
+</center>
+<div id="open-modal2" class="modal-window">
+  <div>
+    <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+    <h3><li>Design Competitions</li></h3>
+    <ul>
+        <li>MadHacks:Nothing for 12 hours</li>
+        <li>TreeHacks: Inshallah Accepted</li>
+    </ul>
+    <h3><li>Ogranizations</li></h3>
+    <ul>
+        <li>DMK</li>
+        <li>HKN</li>
+    </ul>
+  </div>
+</div>
+</ul>
+</center>
+</body>
+</html>
+
+<script>
+  var first_person = '{"name":"Mohammad Sweidan","School Name": "Shuai", "Graduation": "2017", "GPA": "3.8","Major": "Computers Chenk", "professor": "ai", "google": "hopes", "programming": "SQL", "organizations": "DMK;"}'
+  var person1 = JSON.parse(first_person);
+  var second_person = '{"name":"Aanis Ahmad","School Name":"Manarat", "Graduation": "2016", "GPA": "3.4","Major": "Computers", "professor": "ML", "google": "I wish", "programming": "C, C++,Python", "organizations": "HKN;"}'
+  var person2 = JSON.parse(second_person);
+  var third_person = '{"name":"Fu Chen","School Name":"Unknown", "Graduation": "2010", "GPA": "4","Major": "Computers Civil", "professor": "Jahanshahi", "google": "Got it", "programming": "All", "organizations": "None;"}'
+  var person3 = JSON.pase(third_person);
+</script>
+
+
+/*
+<!-- <body>
+<center>
+<h1 style= "color:green;">Mohammad Sweidan</h1>
+</center>
+  <center>
+<a class="ex1" href="default.asp"><button class="button">Work Experience</button></a>
+</center>
+  <ul>
+  <li><h3>Internships</h3></li>
+    <ul>
+      <li>Google software Engineer Fall 2017</li>
+      <li>Microsoft sofware Engineer Spring 2018</li>
+    </ul>
+  <li><h3>Research</h3></li>
+    <ul>
+      <li>Rubbish Research With Jahanshahi</li>
+      <li>Future research with Fu Chen<br></li>
+    </ul>
+  </ul>
+  <center>
+<a class="ex1" href="default.asp"><button class="button">Extra Curricular Activities</button></a>
+</center>
+  <ul>
+    <li><h3>Design Competitions</h3></li>
+    <ul>
+        <li>MadHacks:Nothing for 12 hours</li>
+        <li>TreeHacks: Inshallah Accepted</li>
+    </ul>
+    <li><h3>Ogranizations</h3></li>
+    <ul>
+        <li>DMK</li>
+        <li>HKN</li>
+    </ul>
+  </ul>
+
+
+
+  <button id="myBtn">Education</button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <ul>
+          <li>Purdue University</li>
+          <li>Bachelors of Science in Computer Engineering</li>
+          <li>May 2020</li>
+          <li>GPA:  7/4</li>
+      </ul>
+    </div>
+  </div>
+  <button id="myBtn">Education</button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <ul>
+          <li>Purdue University</li>
+          <li>Bachelors of Science in Computer Engineering</li>
+          <li>May 2020</li>
+          <li>GPA:  7/4</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+</body>
+</html> -->
+*/
